@@ -47,6 +47,8 @@ services:
       context: .
       dockerfile: ./docker/php.Dockerfile
     container_name: laravel_artisan
+    environment:
+      - XDEBUG_MODE=off
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
